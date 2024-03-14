@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- ass-8 -->
+    <form method="get">
+      <div>
+        <input type="hidden" value="hidden" />
+
+        <label>Username</label><br />
+        <input
+          type="text"
+          placeholder="Write username"
+          required
+          placeholder="Username"
+          name="user"
+        />
+      </div>
+      <hr />
+
+      <div>
+        <label>Password</label><br />
+        <input
+          type="password"
+          placeholder="Write A Complex Password"
+          name="pass"
+        />
+      </div>
+      <hr />
+
+      <div>
+        <label>Mobile</label><br />
+        <input
+          type="tel"
+          placeholder="Write mobile number"
+          name="phone"
+          pattern="[0-9]{3}\s\([0-9]{3}\)\s[0-9]{4}\+"
+        />
+      </div>
+      <hr />
+
+      <div>
+        <label>Email</label><br />
+        <input
+          type="email"
+          placeholder="Write email"
+          required
+          placeholder="Write A Valid Email"
+          name="mail"
+        />
+      </div>
+      <hr />
+
+      <div>
+        <label>Subject</label><br />
+        <input type="text" name="subj" />
+      </div>
+      <input type="reset" value="Reset" />
+      <input type="submit" value="Send Data" />
+    </form>
+  </body>
+</html>

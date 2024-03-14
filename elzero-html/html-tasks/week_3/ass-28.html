@@ -1,0 +1,108 @@
+<!-- ass-28:30 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- ass-28:30 - 1 & 2 & 3 -->
+    <form action="" method="get">
+      <!-- Token -->
+      <div>
+        <input
+          type="text"
+          value="b92f1fc2fce391ad7af633723afd3055"
+          name="token"
+          hidden
+        />
+      </div>
+      <br />
+
+      <!-- Email -->
+      <div>
+        <label>Email</label>
+        <input
+          type="email"
+          required
+          placeholder="Write A Valid Email"
+          value="o@o.com"
+          name="mail"
+          readonly
+        />
+      </div>
+      <br />
+
+      <!-- Uname -->
+      <div>
+        <label>Username</label>
+        <input
+          type="text"
+          required
+          placeholder="Username"
+          name="user"
+          autofocus
+          maxlength="20"
+          minlength="5"
+        />
+      </div>
+      <hr />
+      <!-- Skills -->
+      <div>
+        <input id="js" type="checkbox" name="skills" value="js" />
+        <label for="js">js</label>
+      </div>
+      <div>
+        <input id="php" type="checkbox" name="skills" value="php" />
+        <label for="php">php</label>
+      </div>
+      <div>
+        <input id="css" type="checkbox" name="skills" value="css" />
+        <label for="css">css</label>
+      </div>
+      <hr />
+
+      <!-- Job -->
+      <div>
+        <input id="front" type="radio" name="job" value="front-end" />
+        <label for="front">front-end</label>
+      </div>
+      <div>
+        <input id="back" type="radio" name="job" value="back-end" />
+        <label for="back">back-end</label>
+      </div>
+      <div>
+        <input id="full" type="radio" name="job" value="full-stack" />
+        <label for="full">full stack</label>
+      </div>
+      <hr />
+      <!-- choose -->
+      <label for="book">Choose Book:</label>
+      <select name="book" id="book">
+        <optgroup label="PHP">
+          <option value="p5">v5.0</option>
+          <option value="p6">v6.0</option>
+          <option value="p7">v7.0</option>
+        </optgroup>
+        <optgroup label="Python">
+          <option value="py2">v2.0</option>
+          <option value="py3">v3.0</option>
+          <option value="py3.9">v3.9</option>
+        </optgroup>
+      </select>
+      <hr />
+      <textarea
+        name="brief"
+        cols="40"
+        rows="10"
+        placeholder="Write Here Why You Want To Learn Programming"
+      ></textarea>
+      <hr />
+
+      <input type="reset" value="Empty" />
+      <input type="submit" value="Send" />
+    </form>
+  </body>
+</html>
