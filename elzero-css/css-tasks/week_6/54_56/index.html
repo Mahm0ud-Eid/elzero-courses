@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* one */
+      * {
+        box-sizing: border-box;
+      }
+      .div-1 {
+        background-color: #eee;
+        padding: 20px;
+        width: 600px;
+        margin: 20px auto;
+        text-align: center;
+        position: relative;
+      }
+      .div-1::first-letter {
+        color: red;
+      }
+
+      .div-1::after {
+        content: "";
+        position: absolute;
+        background-image: linear-gradient(
+          to right,
+          #f44336 20%,
+          #2196f3 20%,
+          #2196f3 40%,
+          #4caf50 40%,
+          #4caf50 60%,
+          #e91e63 60%,
+          #e91e63 80%,
+          #673ab7 80%
+        );
+        z-index: -1;
+        padding: 40px 20px;
+        width: 600px;
+        top: -10px;
+        left: -20px;
+      }
+
+      /* Two */
+      .input {
+        margin: 20px auto;
+        width: 600px;
+      }
+      input {
+        display: block;
+        padding: 20px;
+        background-color: #eee;
+        border: none;
+        width: 600px;
+      }
+      .input::after {
+        content: "";
+        position: absolute;
+        background-image: linear-gradient(
+          to right,
+          #f44336 50%,
+          #009688 50%,
+          #009688 100%
+        );
+        width: 600px;
+        height: 3px;
+      }
+      input {
+        caret-color: red;
+
+        &:focus-visible {
+          outline: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="input in-1">
+      <input type="text" />
+    </div>
+    <div class="input in-2">
+      <input type="text" />
+    </div>
+    <div class="input in-3">
+      <input type="text" />
+    </div>
+    <div class="div-1">Elzero</div>
+  </body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 74:77 - ass-1 */
+      .div-1,
+      .div-2,
+      .span-3 {
+        width: 50px;
+        height: 50px;
+        margin: 60px auto;
+        border: 5px solid;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .div-1,
+      .div-2:hover,
+      .div-2:hover::before,
+      .div-2:hover::after,
+      .span-3 {
+        border-color: #ea1b69 #fff #ea1b69 #ea1b69;
+        animation-name: loading;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+      .div-1:hover,
+      .div-2:not(:hover),
+      .div-2:not(:hover)::before,
+      .div-2:not(:hover)::after {
+        animation-play-state: paused;
+        animation-name: loading;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+      .div-1::before,
+      .div-1::after,
+      .div-2::before,
+      .div-2::after,
+      .span-3::before {
+        content: "";
+        position: absolute;
+        border: 5px solid;
+        border-radius: 50%;
+      }
+      .div-1::before,
+      .div-2::before {
+        border-color: #1190eb #1190eb #1190eb #fff;
+        width: 65px;
+        height: 65px;
+      }
+      .div-1::after,
+      .div-2::after {
+        border-color: #fff #fca300 #fca300 #fca300;
+        width: 80px;
+        height: 80px;
+      }
+      @keyframes loading {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* 74:77 - ass-2 */
+      .div-2,
+      .div-2:hover {
+        border-color: #1190eb #1190eb #fff #1190eb;
+      }
+      .div-2::before,
+      .div-2:hover::before {
+        border-color: #fca300 #fca300 #fff #fca300;
+      }
+      .div-2::after,
+      .div-2:hover::after {
+        border-color: black black white black;
+      }
+      .div-2:hover::before {
+        animation-duration: 2s;
+      }
+      .div-2:hover::after {
+        animation-duration: 3s;
+      }
+
+      /* 74:77 - ass-3*/
+      .span-3 {
+        background-color: #eee;
+        border: none;
+        animation-direction: reverse;
+      }
+      .span-3::before {
+        width: 40px;
+        height: 40px;
+        border-color: black black #eee black;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 74:77 - ass-4 challenge "later;)" -->
+    <!-- 74:77 - ass-3 -->
+    <span class="span-3"></span>
+    <!-- 74:77 - ass-2 -->
+    <div class="div-2"></div>
+    <!-- 74:77 - ass-1 -->
+    <div class="div-1"></div>
+  </body>
+</html>

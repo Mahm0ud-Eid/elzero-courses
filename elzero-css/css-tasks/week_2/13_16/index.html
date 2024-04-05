@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* ass-13:16 - 1 */
+      .parent .title {
+        color: blue;
+      }
+
+      p,
+      .title {
+        color: green;
+      }
+
+      .child .title {
+        color: red;
+      }
+
+      /* ass-13:16 - 2  */
+      .over-flow {
+        color: white;
+        background-color: brown;
+        width: fit-content;
+        margin: 20px;
+        padding: 20px;
+        max-width: 300px;
+        max-height: 50px;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ass-13:16 - 2  -->
+    <div class="over-flow">Title One</div>
+    <div class="over-flow">Title Two With More Words</div>
+    <div class="over-flow">Title Three With Many Many Many Words</div>
+    <div class="over-flow">
+      Title Three With Many Many Many Words Title Three With Many Many Many
+      WordsTitle Three With Many Many Many WordsTitle Three With Many Many Many
+      Words
+    </div>
+    <!-- ass-13:16 - 1  -->
+    <div class="parent">
+      <div class="child">This Is Child <span class="title">Title</span></div>
+      <span class="title">Child Title</span>
+      <p>Paragraph Content</p>
+    </div>
+    <div class="title">Section Title</div>
+  </body>
+</html>
