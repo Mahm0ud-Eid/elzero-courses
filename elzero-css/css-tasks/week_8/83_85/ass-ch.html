@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 83:85 - ass-1 */
+      @media print {
+        .assign-one {
+          font-size: 40px;
+        }
+      }
+
+      /* 83:85 - ass-2&3 */
+      .container {
+        margin: 20px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+        gap: 20px 20px;
+        justify-content: center;
+      }
+      .ass-2 {
+        display: flex;
+        background-color: #eee;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 80px;
+      }
+      h3 {
+        color: #38aba0;
+        font-weight: bold;
+      }
+      h3,
+      p {
+        margin: 5px;
+      }
+
+      /* Mobile */
+      @media (max-width: 799px) {
+        .container {
+          grid-template-columns: 1fr;
+          grid-template-rows: repeat(4, 1fr);
+        }
+
+        h3 {
+          color: initial;
+        }
+      }
+
+      /* Medium Screens */
+      @media (min-width: 800px) and (max-width: 1200px) {
+        .container {
+          /* grid-template-columns: repeat(2, 1fr); */
+          grid-template-rows: repeat(2, 1fr);
+
+          /* ass-3 */
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-areas: "one one one" "two three four";
+        }
+        .div-1 {
+          grid-area: one;
+        }
+        h3 {
+          color: red;
+        }
+      }
+
+      /* Large Screens */
+      @media (min-width: 1200px) {
+        /* No Need For Anything - What Done First Is Enough */
+
+        /* ass-3 */
+        .container {
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: repeat(3, 1fr);
+          grid-template-areas: "one one" "two three" "four four";
+        }
+        .div-1 {
+          grid-area: one;
+        }
+        .div-4 {
+          grid-area: four;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 83:85 - ass-2&3 -->
+    <div class="container">
+      <div class="ass-2 div-1">
+        <h3>Product One</h3>
+        <p>This Is Product</p>
+      </div>
+      <div class="ass-2 div-2">
+        <h3>Product Two</h3>
+        <p>This Is Product</p>
+      </div>
+      <div class="ass-2 div-3">
+        <h3>Product Three</h3>
+        <p>This Is Product</p>
+      </div>
+      <div class="ass-2 div-4">
+        <h3>Product Four</h3>
+        <p>This Is Product</p>
+      </div>
+    </div>
+
+    <hr />
+
+    <!-- 83:85 - ass-1 -->
+    <div class="assign-one">Elzero Web School</div>
+  </body>
+</html>

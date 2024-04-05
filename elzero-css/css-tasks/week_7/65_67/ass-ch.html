@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 65:67 - ass-1 */
+      .div-1 {
+        height: 200px;
+        width: 300px;
+        margin: 20px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #eee;
+        color: #03a9f4;
+        font-size: 30px;
+        font-weight: bolder;
+        border: 1px solid #ccc;
+      }
+      .div-1::before {
+        content: "";
+        background-color: #03a9f4;
+        height: 200px;
+        width: 300px;
+        position: absolute;
+        z-index: -1;
+        transform: scale(1.03) rotate(-5deg);
+      }
+      .div-1::after {
+        content: "";
+        background-color: #e91e63;
+        height: 200px;
+        width: 300px;
+        position: absolute;
+        z-index: -2;
+        transform: scale(1.03) rotate(5deg);
+      }
+      /* 65:67 - ass-2 & 3 */
+      .div-2 {
+        width: 200px;
+        height: 200px;
+        margin: 40px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #eee;
+        color: black;
+        font-size: 30px;
+        font-weight: bolder;
+        border: 1px solid #ccc;
+        border-radius: 50%;
+      }
+      .div-2::after {
+        content: "";
+        height: 200px;
+        width: 200px;
+        position: absolute;
+        z-index: -1;
+        border: 10px solid;
+        border-color: #e91e63 #e91e63 #e91e63 white;
+        border-radius: 50%;
+      }
+      .div-2::before {
+        content: "";
+        height: 200px;
+        width: 200px;
+        position: absolute;
+        z-index: -1;
+        border: 10px solid;
+        border-color: #03a9f4 white #03a9f4 #03a9f4;
+        transform: scale(1.1);
+        border-radius: 50%;
+      }
+
+      .div-2:hover::after {
+        transform: rotate(360deg);
+        transition: 0.5s;
+        transition-timing-function: ease-in-out;
+      }
+      .div-2:not(:hover)::after {
+        transform: rotate(-360deg);
+        transition: 0.5s;
+        transition-timing-function: ease-in-out;
+      }
+
+      .div-2:hover::before {
+        transform: rotate(360deg) scale(1.1);
+        transition: 0.5s;
+        transition-delay: 0.5s;
+        transition-timing-function: ease-in-out;
+      }
+      .div-2:not(:hover)::before {
+        transform: rotate(-360deg) scale(1.1);
+        transition: 0.5s;
+        transition-delay: 0.5s;
+        transition-timing-function: ease-in-out;
+      }
+
+      /* 65:67 - ass-3 */
+    </style>
+  </head>
+  <body>
+    <!-- 65:67 - ass-2 & 3 -->
+    <div class="div-2">Elzero</div>
+
+    <!-- 65:67 - ass-1 -->
+    <div class="div-1">Elzero</div>
+  </body>
+</html>

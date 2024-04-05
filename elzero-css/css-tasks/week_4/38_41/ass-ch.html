@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 38:41 - ass-1 */
+      .ass-1 {
+        background-color: #eeeeee;
+        width: 100px;
+        height: 100px;
+        float: left;
+        margin: 20px;
+        border-radius: 50%;
+        padding-top: 40px;
+        text-align: center;
+        box-sizing: border-box;
+        position: relative;
+        border: 2px solid black;
+        box-shadow: -5px -5px 0 0 #e91e63, 5px 5px 0 0 #2196f3;
+      }
+      .ass-1::before {
+        top: -10px;
+        position: absolute;
+        left: 50%;
+        margin-left: -10px;
+        width: 20px;
+        height: 20px;
+        background-color: black;
+        color: white;
+        border-radius: 50%;
+      }
+      .div1::before {
+        content: attr(data-num);
+      }
+      .div2::before {
+        content: attr(data-num);
+      }
+      .div3::before {
+        content: attr(data-num);
+      }
+      .clear {
+        clear: both;
+      }
+
+      /* 38:41 - ass-2 */
+      .ass-2 {
+        width: 100px;
+        height: 100px;
+        background-color: #efefef;
+        box-shadow: 3px 3px 7px #6a6a6a inset, -3px -3px 7px #6a6a6a inset;
+        border-top-left-radius: 9px 19px;
+        border-bottom-right-radius: 9px 19px;
+        border-top-right-radius: 50px 50px;
+        border-bottom-left-radius: 50px 50px;
+
+        margin: 10px auto;
+      }
+
+      /* 38:41 - ass-3 */
+      .parent {
+        width: 550px;
+        margin: 10px auto;
+        color: white;
+        text-align: center;
+      }
+
+      .child {
+        float: left;
+        margin: 15px;
+        background-color: #eeeeee;
+        position: relative;
+      }
+      .card-1::after {
+        content: "";
+        border-right: 1px solid #03a9f4;
+        position: absolute;
+        top: 0;
+        right: -17px;
+        background-color: #03a9f4;
+        height: 100%;
+      }
+      .card-2::before {
+        width: 19px;
+        background-color: #03a9f4;
+        height: 19px;
+        left: -23px;
+        position: absolute;
+        content: "Or";
+        top: 50%;
+        border-radius: 50%;
+        font-size: 0.5em;
+        line-height: 2.4;
+      }
+      .title {
+        background-color: #03a9f4;
+        padding: 5px;
+        margin: 10px;
+        border-radius: 5px;
+      }
+      .price {
+        color: black;
+        background-color: #ddd;
+        height: 100px;
+        width: 100px;
+        margin: 10px;
+        line-height: 5;
+        font-size: larger;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child card-1">
+        <div class="title">Basic</div>
+        <div class="price">Free</div>
+      </div>
+      <div class="child card-2">
+        <div class="title">Pro</div>
+        <div class="price">$30</div>
+      </div>
+    </div>
+    <div class="clear"></div>
+
+    <div class="ass-2"></div>
+
+    <div class="ass-1 div1" data-num="1">Element</div>
+    <div class="ass-1 div2" data-num="2">Element</div>
+    <div class="ass-1 div3" data-num="3">Element</div>
+    <div class="clear"></div>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 86:88 ass-1 */
+      .center-flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .center-position {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+      }
+      .circle-100 {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+      }
+      .circle-200 {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+      }
+
+      /* 86:88 ass-2 */
+      .arrow {
+        background-color: #dddddd;
+        padding: 30px;
+        margin: 40px;
+        display: flex;
+        align-items: center;
+        position: relative;
+      }
+      .arrow::before {
+        position: absolute;
+        content: "";
+        z-index: -1;
+        border: 20px solid;
+      }
+      .arrow.right::before {
+        right: -40px;
+        border-color: transparent transparent transparent #ddd;
+      }
+      .arrow.left::before {
+        left: -40px;
+        border-color: transparent #ddd transparent transparent;
+      }
+      .arrow.top::before {
+        transform: translateX(-20px);
+        top: -40px;
+        left: 50%;
+        border-color: transparent transparent #ddd transparent;
+      }
+      .arrow.bottom::before {
+        transform: translateX(-20px);
+        bottom: -40px;
+        left: 50%;
+        border-color: #ddd transparent transparent transparent;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 86:88 ass-2 -->
+    <div class="arrow top">Elzero</div>
+    <div class="arrow right">Elzero</div>
+    <div class="arrow bottom">Elzero</div>
+    <div class="arrow left">Elzero</div>
+  </body>
+</html>
