@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 34:37 - ass:1 */
+      .div1 {
+        width: 300px;
+        height: 60px;
+        margin: auto;
+        background-color: #eee;
+        text-align: center;
+        line-height: 1.5;
+        font-weight: bold;
+        padding-top: 30px;
+        margin-bottom: 20px;
+      }
+      :empty {
+        background-color: #f00;
+      }
+
+      /* 34:37 - ass:2 */
+      .div2 {
+        background-color: #d4d4d4;
+        margin: auto;
+        height: 60px;
+        position: relative;
+        line-height: 2;
+        margin: 20px;
+      }
+      .div2::first-letter {
+        display: inline-block;
+        background-color: red;
+
+        color: white;
+        font-size: 30px;
+        padding: 7px;
+        margin-left: -14px;
+      }
+
+      /* 34:37 - ass:3 */
+      .three {
+        position: relative;
+        background-color: #efefef;
+        line-height: 50px;
+        padding-left: 10px;
+        width: 400px;
+        margin: auto;
+        margin-bottom: 20px;
+        border-left: 4px solid #e91e63;
+      }
+      .three::before {
+        content: attr(data-person);
+        position: absolute;
+        width: 70px;
+        background-color: #ddd;
+        text-align: center;
+        top: 50%;
+        margin-top: -15px;
+        line-height: 30px;
+        left: -93px;
+      }
+      .three::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: -24px;
+        width: 0;
+        height: 0;
+        margin-top: -10px;
+        border-style: solid;
+        border-width: 10px;
+        border-color: transparent #e91e63 transparent transparent;
+      }
+
+      /* 34:37 - ass:4 */
+      .four {
+        counter-increment: counter;
+        position: relative;
+        background-color: #efefef;
+        line-height: 50px;
+        padding-left: 10px;
+        width: 400px;
+        margin: auto;
+        margin-bottom: 20px;
+        border-right: 4px solid #f44336;
+      }
+      .four::before {
+        content: counter(counter);
+        position: absolute;
+        line-height: 50px;
+        background-color: #f44336;
+        color: white;
+        width: 50px;
+        text-align: center;
+        left: -50px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <p class="four">This Is Very Very Long Product Title</p>
+    <p class="four">This Is Very Very Long Product Title</p>
+    <p class="four">This Is Very Very Long Product Title</p>
+    <p class="four">This Is Very Very Long Product Title</p>
+    <p class="four">This Is Very Very Long Product Title</p>
+    <p class="four">This Is Very Very Long Product Title</p>
+
+    <p class="three" data-person="Osama">
+      This Is Very Very Long Comment Number One
+    </p>
+    <p class="three" data-person="Ahmed">
+      This Is Very Very Long Comment Number Two
+    </p>
+    <p class="three" data-person="Sayed">
+      This Is Very Very Long Comment Number Three
+    </p>
+
+    <div class="div2">1 Hello, Welcome To Elzero Web School</div>
+
+    <div class="div1">One</div>
+    <div class="div1"></div>
+    <div class="div1">Three</div>
+  </body>
+</html>

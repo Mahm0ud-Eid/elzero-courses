@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 42:45 - ass-1 */
+      .one-parent {
+        background-color: #f1f1f1;
+        margin-top: 40px;
+        padding: 10px;
+        line-height: 2;
+        text-align: center;
+      }
+      .one-child {
+        background-color: #ddd;
+      }
+      .one-parent:hover {
+        transition-duration: 500ms;
+        margin-top: 0;
+        .one-child {
+          transition-delay: 500ms;
+          transition-duration: 500ms;
+          margin-top: 40px;
+        }
+      }
+
+      /* 42:45 - ass-2 */
+      .two {
+        background-color: #f1f1f1 !important;
+        color: #f1f1f1 !important;
+        border: none !important;
+        font-size: 20px !important;
+        width: 400px;
+        margin: auto;
+        float: center;
+        position: relative;
+      }
+      .two::before {
+        position: absolute;
+        content: "Elzero";
+        color: black;
+        font-size: 20px;
+        text-align: center;
+        right: 200px;
+      }
+      .clear {
+        clear: both;
+      }
+
+      /* 42:45 - ass-3 */
+      /* :root {
+        --mainColor: #009688;
+        --mainPadding: 10px;
+      } */
+
+      .three {
+        padding: var(--mainPadding, 10px);
+        color: var(--mainColor, red);
+        border: var(--mainColor, black) solid 2px;
+        margin: var(--mainPadding, 10px);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 42:45 - ass-3 -->
+    <div class="three">Element</div>
+    <div class="three">Element</div>
+    <div class="three">Element</div>
+
+    <!-- 42:45 - ass-2 -->
+    <div
+      class="two"
+      style="
+        background-color: red;
+        color: white;
+        padding: 20px;
+        border: 1px solid blue;
+        font-size: 80px;
+      "
+    >
+      Hello Div
+    </div>
+    <div class="clear"></div>
+
+    <!-- 42:45 - ass-1 -->
+    <div class="one-parent">
+      Will Go Up On Hover in Half Second
+      <div class="one-child">Will Go Down After Half Second</div>
+    </div>
+  </body>
+</html>

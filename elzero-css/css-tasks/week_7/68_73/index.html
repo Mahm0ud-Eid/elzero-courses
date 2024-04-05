@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 68:73 - ass-1 */
+      .one {
+        width: 150px;
+        margin: 20px auto;
+        background-color: #ff5722;
+        color: white;
+        text-align: center;
+        position: relative;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .one::before {
+        position: absolute;
+        content: "";
+        width: inherit;
+        height: inherit;
+        background-color: inherit;
+        transform: skew(10deg, 10deg);
+        z-index: -1;
+      }
+      .one::after {
+        position: absolute;
+        content: "";
+        width: inherit;
+        height: inherit;
+        background-color: inherit;
+        transform: skew(-10deg, -10deg);
+        z-index: -1;
+      }
+      /* 68:73 - ass-2 */
+      .two {
+        width: 150px;
+        height: 77px;
+        margin: 20px auto;
+        color: white;
+        background-color: #009688;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+      .two::before {
+        position: absolute;
+        content: "";
+        width: inherit;
+        height: inherit;
+        background-color: inherit;
+        transform: skewX(20deg);
+        z-index: -1;
+        left: -20px;
+      }
+      .two::after {
+        position: absolute;
+        content: "";
+        width: 20px;
+        height: inherit;
+        background-color: inherit;
+        transform: skewX(20deg);
+        z-index: -1;
+        left: -46px;
+      }
+
+      /* 68:73 - ass-3 */
+      .class {
+        transform: scaleX(3), skewY(15deg), skewX(0deg), scaleY(3),
+          translateX(30px), translateY(100px);
+      }
+
+      /* 68:73 - ass-4 */
+      .four {
+        box-sizing: border-box;
+        width: 200px;
+        height: 200px;
+        margin: 100px auto;
+        background-color: #607d8b;
+        position: relative;
+      }
+      .four::before {
+        box-sizing: border-box;
+        position: absolute;
+        content: "Elzero";
+        color: #fff;
+        bottom: 0px;
+        /* left: 10px; */
+        width: inherit;
+        padding-left: 10px;
+        padding-bottom: 5px;
+        border-bottom: 4px solid black;
+      }
+      .four::after {
+        position: absolute;
+        content: "";
+        top: -71px;
+        left: 28px;
+        width: 69%;
+        height: 69%;
+        background-color: #000;
+        border-bottom: 4px solid #fff;
+        border-right: 4px solid #fff;
+        transform: rotate(45deg);
+      }
+
+      /* 68:73 - ass-5 */
+      .container {
+        perspective: 600px;
+      }
+      .five {
+        width: 200px;
+        height: 200px;
+        margin: auto;
+        margin-bottom: 200px;
+        position: relative;
+        perspective: 200px;
+        transform-style: preserve-3d;
+        transition: transform 2s;
+        /* transform-origin: right center; */
+      }
+      .five::before,
+      ::after {
+        position: absolute;
+        color: #fff;
+        font-size: 30px;
+        width: inherit;
+        height: inherit;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        backface-visibility: hidden;
+      }
+      .five::before {
+        content: "Front";
+        background-color: #fa3664;
+      }
+      .five::after {
+        content: "Back";
+        background-color: #1692fc;
+        transform: rotateY(180deg);
+      }
+      .five:hover {
+        transform: rotateY(-180deg);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 68:73 - ass-5 -->
+    <div class="container">
+      <div class="five"></div>
+    </div>
+
+    <!-- 68:73 - ass-4 -->
+    <div class="four"></div>
+
+    <!-- 68:73 - ass-3 -->
+    <!-- 68:73 - ass-2 -->
+    <h1 class="two">Elzero</h1>
+
+    <!-- 68:73 - ass-1 -->
+    <h1 class="one">Elzero</h1>
+  </body>
+</html>

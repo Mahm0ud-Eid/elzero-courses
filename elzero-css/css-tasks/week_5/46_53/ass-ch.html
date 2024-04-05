@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 46:53 - ass-1 */
+      .one {
+        display: flex;
+        width: 100px;
+        height: 100px;
+        background-color: #eee;
+        color: #ff5724;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        margin: auto;
+        position: relative;
+      }
+      .one::before,
+      .one::after {
+        position: absolute;
+        height: 100px;
+        width: 100px;
+        content: "";
+        border-radius: 50%;
+      }
+      .one::before {
+        border-left: 5px solid #03a9f4;
+      }
+      .one::after {
+        border-right: 5px solid #ff5724;
+      }
+
+      /* 46:53 - ass-2 */
+      .parent-1 {
+        display: flex;
+        width: 600px;
+        height: 300px;
+        padding: 10px;
+        margin: auto;
+        background-color: #eee;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: space-between;
+      }
+      .parent-1 div {
+        background-color: #f44336;
+        color: white;
+        width: calc(90% / 3);
+        text-align: center;
+        padding: 5px;
+      }
+
+      /* 46:53 - ass-3 */
+      .parent-3 {
+        display: flex;
+        width: 600px;
+        height: 300px;
+        padding: 10px;
+        margin: auto;
+        background-color: #eee;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        /* align-content: space-between; */
+      }
+      .parent-3 div {
+        background-color: #607d8b;
+        color: white;
+        width: calc(90% / 3);
+        text-align: center;
+        padding: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .six-3 {
+        order: -1;
+      }
+      .three-3 {
+        order: 2;
+        align-self: flex-start;
+      }
+      .four-3 {
+        order: 3;
+      }
+      .five-3 {
+        order: 4;
+      }
+      .two-3 {
+        order: 5;
+      }
+      .one-3 {
+        order: 6;
+        align-self: flex-end;
+      }
+
+      /* 46:53 - ass-4 */
+      .parent-4 {
+        display: flex;
+        width: 600px;
+        height: 300px;
+        padding: 10px;
+        margin: 20px auto;
+        background-color: #eee;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+      }
+      .parent-4 div {
+        background-color: #009688;
+        color: white;
+        height: calc(60% / 3);
+        padding: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .two-4 {
+        align-self: stretch;
+        width: calc(100% / 2);
+      }
+
+      /* 46:53 - ass-5 */
+      .parent-5 {
+        display: flex;
+        width: 600px;
+        height: 300px;
+        padding: 10px;
+        margin: 20px auto;
+        background-color: #eee;
+        justify-content: space-between;
+      }
+      .parent-5 div {
+        color: white;
+        height: calc(94% / 2);
+        width: calc(55% / 4);
+
+        padding: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .four-5 {
+        background-color: #673ab7;
+        order: -1;
+        align-self: flex-end;
+      }
+      .two-5 {
+        align-self: flex-end;
+        background-color: #8bc34a;
+      }
+      .one-5 {
+        background-color: #ff9800;
+      }
+      .three-5 {
+        background-color: #795548;
+      }
+
+      /* 46:53 - ass-6 */
+      .page {
+        --main-padding: 10px;
+        --main-margin: var(--main-padding);
+        display: flex;
+        background-color: #eee;
+        margin: var(--main-margin);
+        width: 100%;
+        flex-wrap: wrap;
+      }
+      .ul,
+      li {
+        display: inline;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .links,
+      .logo {
+        padding: var(--main-margin);
+        margin: var(--main-margin);
+        background-color: #ddd;
+      }
+      .header {
+        width: calc(100% / 1);
+        display: flex;
+        padding: var(--main-margin);
+        margin: var(--main-margin);
+      }
+      .links {
+        justify-self: flex-end;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 46:53 - ass-6 -->
+    <div class="page">
+      <div class="header">
+        <div class="logo">Logo</div>
+        <ul class="links">
+          <li>Home</li>
+          <li>About</li>
+          <li>Services</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+      <div class="main-area">
+        <div class="content">Content</div>
+        <div class="sidebar">Sidebar</div>
+      </div>
+      <div class="footer">
+        <div class="copyright">Copyright 2021</div>
+        <div class="design">Designed By Elzero</div>
+      </div>
+    </div>
+
+    <!-- 46:53 - ass-5 -->
+    <div class="parent-5">
+      <div class="one-5">1</div>
+      <div class="two-5">2</div>
+      <div class="three-5">3</div>
+      <div class="four-5">4</div>
+    </div>
+    <!-- 46:53 - ass-4 -->
+    <div class="parent-4">
+      <div class="one-4">1</div>
+      <div class="two-4">2</div>
+      <div class="three-4">3</div>
+    </div>
+
+    <!-- 46:53 - ass-3 -->
+    <div class="parent-3">
+      <div class="one-3">1</div>
+      <div class="two-3">2</div>
+      <div class="three-3">3</div>
+      <div class="four-3">4</div>
+      <div class="five-3">5</div>
+      <div class="six-3">6</div>
+    </div>
+
+    <!-- 46:53 - ass-2 -->
+    <div class="parent-1">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </div>
+
+    <!-- 46:53 - ass-1 -->
+    <div class="one">Elzero</div>
+  </body>
+</html>
