@@ -92,7 +92,7 @@ for (++start; start < mix.length; start++) {
 
 // That was part one. let's move to the 2nd part
 
-//Ass 8
+//Ass 8 (2.1)
 /* let index = 0;
 let counter = 0;
 let friends = ["Ahmed", "Sayed", "Ali", 1, 2, "Mahmoud", "Amany"];
