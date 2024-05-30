@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .assign {
+        text-align: center;
+        padding-top: 20px;
+      }
+      .assign input {
+        padding: 10px;
+        width: 300px;
+        border: 1px solid #ddd;
+      }
+      .assign input:focus {
+        outline: none;
+        border-color: #ccc;
+      }
+      .assign [title="Current"] {
+        padding: 20px;
+        margin: 10px auto;
+        width: 610px;
+        background-color: #f1f0f0;
+      }
+      .assign .classes-list {
+        padding: 20px;
+        margin: 10px auto;
+        width: 610px;
+        background-color: #f1f0f0;
+      }
+      .assign .classes-list h5 {
+        margin: 0 0 10px;
+        text-align: left;
+      }
+      .assign .classes-list div span {
+        background-color: #ff5722;
+        padding: 6px 10px 8px;
+        margin-right: 5px;
+        border-radius: 6px;
+        color: white;
+        display: inline-flex;
+      }
+    </style>
+
+    <script>
+      // Ass 1
+      let links;
+      window.onload = function () {
+        links = document.querySelectorAll("a");
+
+        for (let i = 0; i < links.length; i++) {
+          if (
+            links[i].classList.contains("open") &&
+            links[i].innerHTML == "Elzero"
+          ) {
+            links[i].click();
+          }
+        }
+        console.log(links);
+      };
+    </script>
+
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <!-- Ass 1 -->
+    <a class="open" href="https://google.com">Google</a>
+    <a class="open" href="https://elzero.org">Elzero</a>
+    <a class="not" href="https://facebook.com">Facebook</a>
+    <a class="linked" href="https://linkedin.com">Elzero</a>
+
+    <!-- Ass 2 -->
+    <!--     <div class="assign">
+      <input type="text" class="classes-to-add" placeholder="Add Classes" />
+      <input
+        type="text"
+        class="classes-to-remove"
+        placeholder="Remove Classes" />
+      <div class="element current" title="Current">Current Element</div>
+      <div class="classes-list">
+        <h5>Current Element Class Lists</h5>
+        <div></div>
+      </div>
+    </div>
+ -->
+    <script src="ass_ch.js"></script>
+  </body>
+</html>
