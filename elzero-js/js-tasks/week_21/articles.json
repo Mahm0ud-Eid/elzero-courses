@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "mahmoud",
+    "Dep": "CS",
+    "title": "Intro To CS",
+    "content": "blablablabla"
+  },
+  {
+    "id": 2,
+    "name": "ahmed",
+    "Dep": "IT",
+    "title": "Intro To IT",
+    "content": "blablablabla"
+  },
+  {
+    "id": 3,
+    "name": "shico",
+    "Dep": "AI",
+    "title": "Intro To AI",
+    "content": "blablablabla"
+  },
+  {
+    "id": 4,
+    "name": "medo",
+    "Dep": "ML",
+    "title": "Intro To ML",
+    "content": "blablablabla"
+  },
+  {
+    "id": 5,
+    "name": "7oda",
+    "Dep": "CCNA",
+    "title": "Intro To CCNA",
+    "content": "blablablabla"
+  }
+]
