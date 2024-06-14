@@ -21,10 +21,25 @@ body {
   overflow: hidden;
 }
 .link:before {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  transform: translateX(-100%);
+  transition: 0.3s;
 }
 .link span {
+  display: block;
+  transition: 0.3s;
+}
+.link:hover {
+  border-color: orangered;
 }
 .link:hover:before {
+  transform: translateX(0);
+  color: orangered;
 }
 .link:hover span {
+  transform: translateX(100%);
 }
