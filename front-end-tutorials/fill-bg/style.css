@@ -39,7 +39,9 @@ body {
   font-size: 18px;
 }
 .product:hover .number {
+  box-shadow: 0 0 0 500px #009688;
 }
 .product:hover h3,
 .product:hover p {
+  color: white;
 }
