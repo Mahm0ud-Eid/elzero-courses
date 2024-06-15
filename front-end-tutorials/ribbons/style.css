@@ -22,9 +22,22 @@ body {
   position: relative;
   left: -40px;
 }
+.product h2:before,
+.product h2:after {
+  content: "";
+  border-width: 15px;
+  border-style: solid;
+  position: absolute;
+  z-index: -1;
+  bottom: -30px;
+}
 .product h2:before {
+  left: 0px;
+  border-color: #00776b #00776b transparent transparent;
 }
 .product h2:after {
+  right: 0px;
+  border-color: #00776b transparent transparent #00776b;
 }
 .product p {
   line-height: 1.6;
