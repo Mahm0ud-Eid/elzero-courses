@@ -49,6 +49,8 @@ button:hover {
 button:hover span {
   opacity: 1;
 }
+
+/* appear in the bottom */
 [data-position="bottom"] span {
   top: auto;
   bottom: -60px;
