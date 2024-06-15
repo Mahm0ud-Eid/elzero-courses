@@ -17,6 +17,15 @@ body {
   position: relative;
 }
 .fill:before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-fill-color: #ff5722;
 }
 .fill:hover:before {
+  width: 100%;
 }
