@@ -15,6 +15,6 @@ body {
   cursor: pointer;
   transition: 0.2s;
 }
-.up .show {
+.up.show {
   right: 10px;
 }
