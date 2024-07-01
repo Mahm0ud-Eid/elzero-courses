@@ -8,6 +8,7 @@
   font-size: 22px;
   font-weight: bold;
   height: 66.5px;
+  line-height: 3;
 }
 .generate {
   display: block;
