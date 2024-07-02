@@ -1,0 +1,10 @@
+:root {
+  --main-color: rgb(255 255 255 / 80%);
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", sans-serif;
+  background-color: #333;
+}
