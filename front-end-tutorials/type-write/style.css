@@ -15,7 +15,7 @@ p {
   width: 430px;
   text-wrap: nowrap;
   overflow: hidden;
-  animation: ctrl-width 3s 2s steps(40) both;
+  animation: ctrl-width 3s 2s steps(40) both, blink 0.5s infinite;
 }
 
 @keyframes ctrl-width {
@@ -24,5 +24,14 @@ p {
   }
   100% {
     width: 430px;
+  }
+}
+
+@keyframes blink {
+  from {
+    border-right-color: var(--main-color);
+  }
+  to {
+    border-right-color: transparent;
   }
 }
