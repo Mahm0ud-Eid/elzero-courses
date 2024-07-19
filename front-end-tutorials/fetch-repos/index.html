@@ -3,11 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>random element</title>
+    <title>Fetch Repos</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="star"></div>
+    <div class="git">
+      <input type="text" class="name" placeholder="Enter Github UserName" />
+      <button class="btn">Get Repos</button>
+    </div>
+
+    <ul class="repos-table">
+      <li class="table-header">
+        <div class="col col-1">Repo Id</div>
+        <div class="col col-2">Repo Name</div>
+        <div class="col col-3">Stars</div>
+        <div class="col col-4">Visit</div>
+      </li>
+    </ul>
+
     <script src="main.js"></script>
+    <script
+      src="https://kit.fontawesome.com/43c699a65d.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
